@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{29A53E67-BCA0-44E0-BC83-4CEA710F97E7}</ProjectGuid>
+    <ProjectGuid>{4FD2F2D1-13FE-4E3C-B27C-40EE226407DE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Testy</RootNamespace>
-    <AssemblyName>Testy</AssemblyName>
+    <RootNamespace>Zadanie2</RootNamespace>
+    <AssemblyName>Zadanie2</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Testy.cs" />
+    <Compile Include="Zadanie2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
