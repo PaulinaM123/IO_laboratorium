@@ -30,7 +30,7 @@ namespace Zadanie2
 
             byte[] buffer = new byte[256];
             String data = null;
-            string server_hello = "Hello (od servere)";
+            string server_hello = "Hello (od servera)";
             Console.WriteLine("Czekanie na połączenie... ");
             while (true)
             {

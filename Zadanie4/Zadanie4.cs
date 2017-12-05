@@ -11,7 +11,7 @@ namespace Zadanie4
 {
     class Zadanie4
     {
-        private static Object thisLock = new Object();
+        private static readonly Object thisLock = new Object();
         static void Main(string[] args)
         {
             //dodanie serwera do puli wątków
@@ -104,7 +104,7 @@ namespace Zadanie4
 }
 /****************WNIOSKI****************
  * W takim rozwiązaniu "lock" blokuje dostęp do części 
- * kodu zanjdującej się w klamrach innym wątko do momentu
+ * kodu znajdującej się w klamrach innym wątkom do momentu
  * aż wątek znajdujący się w tej sekcji jej nie zakończy.
  * Pozostałe wątki czekają aż dostęp zostanie odblokowany.
  * W sekcji może w tym samym czasie przebywać tylko jeden wątek.
