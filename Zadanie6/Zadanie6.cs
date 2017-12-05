@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
+
 
 namespace Zadanie6
 {
@@ -34,9 +32,14 @@ namespace Zadanie6
 
             Console.WriteLine(Encoding.ASCII.GetString(buffer, 0, bytesRead));
 
-            event_1.Set();
+             event_1.Set();
             fs.Close();
         }
 
     }
 }
+
+/****************WNIOSKI****************
+ * Wątek główny nie czeka na zakończenie operacji callback.
+ * W związku z tym konieczne jest wykorzystanie metody AutoResetEvent.
+ */

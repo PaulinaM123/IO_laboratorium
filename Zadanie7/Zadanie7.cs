@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Zadanie7
 {
@@ -28,3 +24,9 @@ namespace Zadanie7
         }
     }
 }
+
+/****************WNIOSKI****************
+ * Wątek główny czeka na zakończenie operacji czytania.
+ * Dzięki takiemu rozwiązaniu mamy pewność, że wątek poboczny 
+ * zostanie wykonany w całości.
+ */

@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
+
 
 namespace Zadanie8
 {
@@ -32,10 +29,10 @@ namespace Zadanie8
                 events[i] = new AutoResetEvent(false);
             }
 
-            var result_1 = Fib_i.BeginInvoke(fibonacci_value, ThreadProc, new object[] { Fib_i, "Fibonacci iteracyjnie: ", events[0] });
-            var result_2 = Fib_r.BeginInvoke(fibonacci_value, ThreadProc, new object[] { Fib_r, "Fibonacci rekurencyjnie: ", events[1] });
-            var result_3 = Silnia_i.BeginInvoke(silnia_value, ThreadProc, new object[] { Silnia_i, "Silnia iteracyjnie: ", events[2] });
-            var result_4 = Silnia_r.BeginInvoke(silnia_value, ThreadProc, new object[] { Silnia_r, "Silnia rekurencja: ", events[3] });
+            var result_1 = Fib_i.BeginInvoke(fibonacci_value, myAsyncCallback, new object[] { Fib_i, "Fibonacci iteracyjnie: ", events[0] });
+            var result_2 = Fib_r.BeginInvoke(fibonacci_value, myAsyncCallback, new object[] { Fib_r, "Fibonacci rekurencyjnie: ", events[1] });
+            var result_3 = Silnia_i.BeginInvoke(silnia_value, myAsyncCallback, new object[] { Silnia_i, "Silnia iteracyjnie: ", events[2] });
+            var result_4 = Silnia_r.BeginInvoke(silnia_value, myAsyncCallback, new object[] { Silnia_r, "Silnia rekurencja: ", events[3] });
 
 
             WaitHandle.WaitAll(events);
@@ -95,7 +92,7 @@ static int Fibonacci_iteracyjnie(int x)
 }
 
 
-static void ThreadProc(IAsyncResult stateInfo)
+static void myAsyncCallback(IAsyncResult stateInfo)
 {
     DelegateType delegat = ((object[])(stateInfo.AsyncState))[0] as DelegateType;
     string s = ((object[])(stateInfo.AsyncState))[1] as string;
@@ -108,3 +105,8 @@ static void ThreadProc(IAsyncResult stateInfo)
 
     }
 }
+
+/****************WNIOSKI****************
+Wybrany tryb APM: Callback
+Kolejność wykonywania metod jest różna.
+ */
