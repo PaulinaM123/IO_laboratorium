@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{535B9200-FBC2-4320-ADCE-E1433F02FDFB}</ProjectGuid>
+    <ProjectGuid>{C32A29F4-142A-44C1-8386-6F2A1065A3CC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Testy3</RootNamespace>
-    <AssemblyName>Testy3</AssemblyName>
+    <RootNamespace>Zadanie3_TAP</RootNamespace>
+    <AssemblyName>Zadanie3_TAP</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,8 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Testy3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Zadanie3.cs" />
+    <Compile Include="Zadanie_3.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
