@@ -1,0 +1,15 @@
+﻿<Window x:Class="Bitmapa.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bitmapa"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Button Name="Synchronicznie" Content="Wczytaj synchronicznie" HorizontalAlignment="Left" Margin="23,214,0,0" VerticalAlignment="Top" Width="170" RenderTransformOrigin="0.612,-0.15" Click="Synchronicznie_Click"/>
+        <Button Name="Asynchronicznie" Content="Wczytaj asynchronicznie" HorizontalAlignment="Left" Height="23" Margin="312,212,0,0" VerticalAlignment="Top" Width="160" Click="Asynchronicznie_Click" RenderTransformOrigin="0.75,-1.348"/>
+        <Image Name="Async" HorizontalAlignment="Left" Height="172" Margin="269,13,0,0" VerticalAlignment="Top" Width="230"/>
+        <Image Name="Sync" HorizontalAlignment="Left" Height="176" Margin="12,15,0,0" VerticalAlignment="Top" Width="223"/>
+    </Grid>
+</Window>
